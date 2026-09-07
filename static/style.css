@@ -1,13 +1,19 @@
 :root {
-  --bg: #0d0d0d;
-  --surface: #1a1a1a;
-  --border: #2e2e2e;
+  --bg: #0c0a12;
+  --bg-glow:
+    radial-gradient(ellipse 800px 500px at 10% -10%, rgba(139, 92, 246, 0.16), transparent 60%),
+    radial-gradient(ellipse 700px 500px at 100% 0%, rgba(255, 79, 216, 0.08), transparent 60%);
+  --surface: #171320;
+  --border: #2c2438;
+  --violet: #a78bfa;
+  --violet-glow: rgba(167, 139, 250, 0.55);
+  --magenta: #ff4fd8;
   --green: #39ff14;
   --amber: #ffb300;
   --red: #ff3b3b;
-  --muted: #555;
-  --text: #e0e0e0;
-  --text-dim: #888;
+  --muted: #58506a;
+  --text: #e9e4f5;
+  --text-dim: #8b83a3;
   --radius: 12px;
   --radius-sm: 8px;
 }
@@ -15,14 +21,15 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  background: var(--bg);
+  background: var(--bg) var(--bg-glow);
+  background-attachment: fixed;
   color: var(--text);
   font-family: 'Courier New', Courier, monospace;
   min-height: 100vh;
 }
 
-a { color: var(--green); text-decoration: none; }
-a:hover { text-decoration: underline; }
+a { color: var(--violet); text-decoration: none; }
+a:hover { color: var(--magenta); text-decoration: underline; }
 
 header {
   display: flex;
@@ -38,7 +45,8 @@ header {
 .logo {
   font-size: 1.1rem;
   font-weight: bold;
-  color: var(--green);
+  color: var(--violet);
+  text-shadow: 0 0 12px var(--violet-glow);
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -81,7 +89,7 @@ section { margin-bottom: 38px; }
   transition: border-color 0.2s;
 }
 
-.card:hover { border-color: var(--green); }
+.card:hover { border-color: var(--violet); box-shadow: 0 0 18px rgba(167, 139, 250, 0.12); }
 
 .card-top {
   display: flex;
