@@ -151,16 +151,6 @@ section { margin-bottom: 38px; }
   pointer-events: none;
 }
 
-.private-tag {
-  font-size: 0.62rem;
-  color: var(--text-dim);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  padding: 1px 5px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
 footer {
   text-align: center;
   padding: 20px;
